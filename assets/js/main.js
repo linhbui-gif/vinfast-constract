@@ -1,52 +1,13 @@
-window.onload = () => {
-  // owlCarousel.init()
-  // loading.init();
-};
-
-const loading = {
-  init: function () {
-    this.config();
+let enabledButton  = {
+  init:function(){
+      this.enabled()
   },
-  config: function () {},
-};
-
-const owlCarousel = {
-  init: function () {
-    // this.setupTeamCarousel()
-  },
-  setupTeamCarousel: function () {
-    const $owl = $("#about-team-carousel").owlCarousel({
-      responsive: {
-        0: {
-          items: 1,
-          slideBy: 1,
-        },
-        575: {
-          items: 2,
-          slideBy: 2,
-        },
-        700: {
-          items: 3,
-          slideBy: 3,
-        },
-        991: {
-          items: 4,
-          slideBy: 4,
-        },
-      },
-      loop: true,
-      autoplay: true,
-      autoplayTimeout: 4000,
-      autoplayHoverPause: true,
-      smartSpeed: 300,
-      lazyLoad: true,
-      dots: true,
-      nav: true,
-      navText: [
-        '<img src="./assets/icons/icon-arrow-left-white.svg" alt="" />',
-        '<img src="./assets/icons/icon-arrow-right-white.svg" alt="" />',
-      ],
-      margin: 20,
-    });
-  },
-};
+  enabled:function(){
+     const checkbox = document.querySelector('#checkbox-control')
+     const button = document.querySelector('.TermOfUsePage-submit .Button')
+     checkbox.onchange = function() {
+      button.classList.toggle('disabled')
+    };
+  }
+}
+enabledButton.init()
