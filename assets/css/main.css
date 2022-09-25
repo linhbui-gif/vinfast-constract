@@ -1990,9 +1990,15 @@ ul {
 .SignedPage-view-footer-item {
     color: #1464f4;
     cursor: pointer;
-    transition: .3s ease
+    transition: .3s ease;
+    position: relative;
 }
-
+.SignedPage-view-footer-item input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
 .SignedPage-view-footer-item:hover {
     opacity: .8
 }
